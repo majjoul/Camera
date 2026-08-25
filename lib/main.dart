@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'mother_screen.dart';
+import 'child_screen.dart';
 
 void main() {
   runApp(const BabyMonitorApp());
@@ -33,7 +35,12 @@ class RoleSelectionScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MotherScreen()),
+                );
+              },
               child: const Text("جوال الأم (المستقبِل)", style: TextStyle(fontSize: 18)),
             ),
             const SizedBox(height: 20),
@@ -41,7 +48,12 @@ class RoleSelectionScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ChildScreen()),
+                );
+              },
               child: const Text("جوال الطفل (الكاميرا)", style: TextStyle(fontSize: 18)),
             ),
           ],
